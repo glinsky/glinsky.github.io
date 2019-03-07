@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="446" height="387" viewBox="0 0 446 387">
+    <defs>
+        <path id="a" d="M.65 179.438V66.383L88.897.447v113.055L.651 179.438"/>
+        <linearGradient id="b" x1="-261.736%" x2="247.148%" y1="-20.35%" y2="94.491%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#7F8CB8"/>
+        </linearGradient>
+        <path id="d" d="M.728 179.648V66.361L88.92.29v113.287L.728 179.648"/>
+        <path id="f" d="M91.856 42.623v407.72L.216 408.169V.449h.04l91.6 42.174"/>
+        <path id="h" d="M91.936 42.46v410.373L.297 410.62V.286L91.936 42.46"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(265 88)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="url(#b)" d="M.65 179.438V66.383L88.897.447v113.055L.651 179.438" mask="url(#c)" opacity=".1"/>
+        </g>
+        <g transform="translate(89)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <path fill="url(#b)" d="M.728 179.648V66.361L88.92.29v113.287L.728 179.648" mask="url(#e)" opacity=".1"/>
+        </g>
+        <g transform="translate(354 88)">
+            <mask id="g" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <path fill="url(#b)" d="M91.856 42.623v407.72L.216 408.169V.449h.04l91.6 42.174" mask="url(#g)" opacity=".1"/>
+        </g>
+        <g transform="translate(177)">
+            <mask id="i" fill="#fff">
+                <use xlink:href="#h"/>
+            </mask>
+            <path fill="url(#b)" d="M91.936 42.46v410.373L.297 410.62V.286L91.936 42.46" mask="url(#i)" opacity=".1"/>
+        </g>
+        <path fill="url(#b)" d="M91 69v303L0 329.844V137.058L91 69" opacity=".1"/>
+    </g>
+</svg>
