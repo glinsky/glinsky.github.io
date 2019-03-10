@@ -8,7 +8,7 @@
         <div class="col-12 flex-column col-md-6 pl-sm-0">
           <ul>
             <li>Наши продукты</li>
-            <li><a href="#">CRM система</a></li>
+            <li><a href="#"><router-link :to="{ name: 'CRM' }">CRM система</router-link></a></li>
             <li><a href="#">Почтовый клиент</a></li>
             <li><a href="#">Cервис проверки клиентов</a></li>
             <li><a href="#">Облачное хранилище клиентов</a></li>
