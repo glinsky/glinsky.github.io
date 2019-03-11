@@ -104,7 +104,7 @@
           <hr class="product-block__bottom-line">
         </div>
         <!-- client block -->
-        <div class="container product-block__item client-block mb-5" id="client">
+        <div class="container product-block__item client-block mb-5">
           <b-card no-body class="overflow-hidden card-img-left border-0">
             <b-row no-gutters>
               <b-col md="6" class="text-center">
@@ -140,7 +140,7 @@
               <p class="card-text">Оставьте заявку и мы совершим индивидуальный расчет проекта
                 <br>по внедрению системы
               </p>
-              <b-button variant="outline-secondary">Подробнее</b-button>
+              <b-button variant="outline-secondary">Узнать стоимость</b-button>
             </div>
           </div>
         </div>
@@ -195,7 +195,6 @@
                       </b-card>
                     </div>
                   </div>
-                  </span>
                 </b-carousel-slide>
                 
                 <b-carousel-slide>
@@ -234,7 +233,6 @@
                       </b-card>
                     </div>
                   </div>
-                  </span>
                 </b-carousel-slide>
 
                 <b-carousel-slide>
@@ -273,7 +271,6 @@
                       </b-card>
                     </div>
                   </div>
-                  </span>
                 </b-carousel-slide>
               </b-carousel>
             </div>

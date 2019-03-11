@@ -13,7 +13,7 @@ import HeaderApp from './Header.vue'
 import App from './App.vue'
 import FooterApp from './Footer.vue'
 import Home from './pages/Home.vue'
-import OurProducts from './pages/OurProducts.vue'
+import About from './pages/About.vue'
 import Crm from './pages/Crm.vue'
 
 Vue.use(BootstrapVue)
@@ -26,8 +26,9 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', name: 'home', component: Home },
-    { path: '/our-products', name: 'our-products', component: OurProducts },
     { path: '/crm', name: 'CRM', component: Crm },
+    { path: '/about-us', name: 'about-us', component: About },
+
 
   ],// сокращённая запись для `routes: routes`
   scrollBehavior(to, from, savedPosition) {
