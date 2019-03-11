@@ -18,7 +18,7 @@
           <ul>
             <li>Компания</li>
             <li><a href="#">Услуги</a></li>
-            <li><a href="#">О нас</a></li>
+            <li><a href="#"><router-link :to="{ name: 'about-us' }">О нас</router-link></a></li>
             <li><a href="#">Связаться с нами</a></li>
           </ul>
         </div>

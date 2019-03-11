@@ -34,7 +34,7 @@
             <router-link :to="{ name: 'home' }">Услуги</router-link>
           </b-nav-item>
           <b-nav-item href="#">
-            <router-link :to="{ name: 'home' }">О нас</router-link>
+            <router-link :to="{ name: 'about-us' }">О нас</router-link>
           </b-nav-item>
           <b-nav-item href="#">
             <router-link :to="{ name: 'home' }">

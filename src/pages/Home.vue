@@ -283,7 +283,7 @@
             <p class="card-text">Узнайте, что мы можем сделать и как мы можем достичь ваших целей
               <br>- вместе.
             </p>
-            <b-button variant="outline-secondary">Подробнее</b-button>
+            <b-button variant="outline-secondary">Связаться с нами</b-button>
           </div>
         </div>
       </div>
