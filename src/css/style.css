@@ -971,6 +971,7 @@ a:hover,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-right: 0;
   }
 }
 
