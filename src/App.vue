@@ -4,26 +4,17 @@
     <transition name="component-fade" mode="out-in">
       <router-view></router-view>
     </transition>
-
-    <modal v-show="showModal" @close="showModal = false"></modal>
   </div>
 </template>
 
 <script>
 
-import Modal from './modal/contact-us.vue'
-
 export default {
-
   name: "app",
-  components: {
-    Modal
-  },
   data() {
     return {
-      showShadow: false,
-      showModal: false
-    }
+      showShadow: false
+    };
   },
   computed: {
     // username () {

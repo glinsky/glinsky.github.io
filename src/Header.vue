@@ -37,7 +37,7 @@
             <router-link :to="{ name: 'about-us' }">О нас</router-link>
           </b-nav-item>
           <b-nav-item href="#">
-            <b-button variant="primary" class="contact-us" @click="$emit('show')">Связаться с нами</b-button>
+            <b-button variant="primary" class="contact-us" @click="show">Связаться с нами</b-button>
             <!-- <button class="modal-default-button" @click="show">OK</button> -->
           </b-nav-item>
         </b-navbar-nav>
@@ -126,9 +126,9 @@ export default {
     mouseLeave: function() {
       this.showMenu = false;
     },
-    // show: function() {
-    //   this.$emit("show", !this.showModal);
-    // }
+    show: function() {
+      this.$emit("show", !this.showModal);
+    }
   },
   mounted() {
     // Скрываем shadow при прокрутке
