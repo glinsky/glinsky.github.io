@@ -1,14 +1,14 @@
 <template>
   <div>
     <header id="header" class="container">
-      <header-app :showModal="showModal" @show="showModal = true"></header-app>
+      <header-app :showModal="showModal" @show="showModal = $event"></header-app>
     </header>
     <div id="main_wrap" class="col-12 px-0">
       <app></app>
     </div>
     <!-- modal -->
     <transition name="modal" mode="out-in">
-      <modal :showModal="showModal" v-show="showModal" @close="showModal = false"></modal>
+      <modal :showModal="showModal" v-show="showModal" @close="showModal = $event"></modal>
     </transition>
     <!-- end modal -->
     <footer id="footer" class="container-fluid px-0">
