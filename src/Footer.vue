@@ -17,7 +17,7 @@
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <ul>
             <li>Компания</li>
-            <li><a href="#">Услуги</a></li>
+            <li><a href="#"><router-link :to="{ name: 'services' }">Услуги</router-link></a></li>
             <li><a href="#"><router-link :to="{ name: 'about-us' }">О нас</router-link></a></li>
             <li><a href="#">Связаться с нами</a></li>
           </ul>
