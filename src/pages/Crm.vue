@@ -95,7 +95,7 @@
                     <li>Начните с выбора дизайна, который вам нравится.</li>
                   </ul>
                   <!-- <router-link :to="{ name: 'CRM' }"> -->
-                  <b-button variant="primary" class="button__detail" @click="goCrm">Подробнее</b-button>
+                  <b-button variant="primary" class="button__detail">Подробнее</b-button>
                   <!-- </router-link> -->
                 </b-card-body>
               </b-col>
