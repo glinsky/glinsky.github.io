@@ -15,6 +15,7 @@ import FooterApp from './Footer.vue'
 import Home from './pages/Home.vue'
 import About from './pages/About.vue'
 import Crm from './pages/Crm.vue'
+import Services from './pages/Services.vue'
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
@@ -28,6 +29,7 @@ const router = new VueRouter({
     { path: '/', name: 'home', component: Home },
     { path: '/crm', name: 'CRM', component: Crm },
     { path: '/about-us', name: 'about-us', component: About },
+    { path: '/services', name: 'services', component: Services },
 
 
   ],// сокращённая запись для `routes: routes`
