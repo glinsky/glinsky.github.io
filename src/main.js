@@ -9,10 +9,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '../src/css/style.css'
 
 // Pages
-import HeaderApp from './Header.vue'
-import App from './App.vue'
-import FooterApp from './Footer.vue'
 import Home from './pages/Home.vue'
+import MainApp from './Main.vue'
 import About from './pages/About.vue'
 import Crm from './pages/Crm.vue'
 import Services from './pages/Services.vue'
@@ -38,30 +36,14 @@ const router = new VueRouter({
   }
 })
 
-const app = new Vue({
-  router,
-  components: {
-    App
-  }
-}).$mount('#main_wrap')
-
-const header = new Vue({
+const main = new Vue({
   router,
   data: function () {
-    return {
-      showModal: true
-    }
+    return {};
   },
   components: {
-    HeaderApp
+    MainApp
   }
-}).$mount('#header')
-
-const footer = new Vue({
-  router,
-  components: {
-    FooterApp
-  }
-}).$mount('#footer')
+}).$mount('#main_app')
 
 
