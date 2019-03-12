@@ -37,9 +37,8 @@
             <router-link :to="{ name: 'about-us' }">О нас</router-link>
           </b-nav-item>
           <b-nav-item href="#">
-            <router-link :to="{ name: 'home' }">
-              <b-button variant="primary" class="contact-us">Связаться с нами</b-button>
-            </router-link>
+            <b-button variant="primary" class="contact-us" @click="$emit('show')">Связаться с нами</b-button>
+            <!-- <button class="modal-default-button" @click="show">OK</button> -->
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -52,7 +51,6 @@
             <div class="row">
               <div class="col-12 col-sm-6 col-md-3 sub-menu__column">
                 <a href="#crm" @click="showMenu=false;">
-                  
                   <router-link :to="{ name: 'CRM' }">
                     <span class="sub-menu__name">CRM система</span>
                   </router-link>
@@ -109,6 +107,11 @@
 <script>
 export default {
   name: "header-app",
+  props: {
+    showModal:{
+      default: false
+    }
+    },
   data() {
     return {
       showMenu: false
@@ -122,7 +125,10 @@ export default {
   methods: {
     mouseLeave: function() {
       this.showMenu = false;
-    }
+    },
+    // show: function() {
+    //   this.$emit("show", !this.showModal);
+    // }
   },
   mounted() {
     // Скрываем shadow при прокрутке

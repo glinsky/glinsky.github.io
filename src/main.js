@@ -17,6 +17,7 @@ import About from './pages/About.vue'
 import Crm from './pages/Crm.vue'
 import Services from './pages/Services.vue'
 
+
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 
@@ -30,7 +31,6 @@ const router = new VueRouter({
     { path: '/crm', name: 'CRM', component: Crm },
     { path: '/about-us', name: 'about-us', component: About },
     { path: '/services', name: 'services', component: Services },
-
 
   ],// сокращённая запись для `routes: routes`
   scrollBehavior(to, from, savedPosition) {
@@ -47,6 +47,11 @@ const app = new Vue({
 
 const header = new Vue({
   router,
+  data: function () {
+    return {
+      showModal: true
+    }
+  },
   components: {
     HeaderApp
   }
@@ -58,3 +63,5 @@ const footer = new Vue({
     FooterApp
   }
 }).$mount('#footer')
+
+

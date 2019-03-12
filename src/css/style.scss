@@ -650,6 +650,7 @@ a,
   .footer-info__left-block {
     @media (max-width: 767px) {
       flex-direction: column;
+      padding-right: 0;
     }
   }
   .tel-number {

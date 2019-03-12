@@ -23,6 +23,7 @@
           </ul>
         </div>
       </div>
+      
       <div class="footer-info__right-block col-12 col-md-6 text-right">
         <span>Подпишись на новости и будь в курсе всех обновлений</span>
         <b-input-group
