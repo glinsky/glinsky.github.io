@@ -1,14 +1,14 @@
 <template>
   <div>
     <header id="header" class="container">
-      <header-app :showModal="showModal" @show="showModal = $event"></header-app>
+      <header-app :isShowModal="showModal" @show="showModal = $event"></header-app>
     </header>
     <div id="main_wrap" class="col-12 px-0">
-      <app></app>
+      <app :isShowModal="showModal" @show="showModal = $event"></app>
     </div>
     <!-- modal -->
     <transition name="modal" mode="out-in">
-      <modal :showModal="showModal" v-show="showModal" @close="showModal = $event"></modal>
+      <modal :isShowModal="showModal" v-show="showModal" @close="showModal = $event"></modal>
     </transition>
     <!-- end modal -->
     <footer id="footer" class="container-fluid px-0">
@@ -23,6 +23,7 @@ import HeaderApp from './Header.vue'
 import App from './App.vue'
 import FooterApp from './Footer.vue'
 import Modal from "./modal/contact-us.vue"
+// import InfoModal from "./modal/info-modal.vue"
 
 export default {
   name: "main-app",
@@ -32,7 +33,8 @@ export default {
   data() {
     return {
       showMenu: false,
-      showModal: false
+      showModal: false,
+      InfoModal: false,
     };
   },
   computed: {
@@ -112,10 +114,6 @@ ul li .menu-arrow img {
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
-}
-
-.modal-body {
-  margin: 20px 0;
 }
 
 .modal-default-button {

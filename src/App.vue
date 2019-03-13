@@ -11,6 +11,9 @@
 
 export default {
   name: "app",
+  isShowModal: {
+    default: false
+  },
   data() {
     return {
       showShadow: false

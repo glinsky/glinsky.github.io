@@ -283,7 +283,7 @@
             <p class="card-text">Узнайте, что мы можем сделать и как мы можем достичь ваших целей
               <br>- вместе.
             </p>
-            <b-button variant="outline-secondary">Связаться с нами</b-button>
+            <b-button variant="outline-secondary" @click="show">Связаться с нами</b-button>
           </div>
         </div>
       </div>
@@ -294,6 +294,9 @@
 <script>
 export default {
   name: "home",
+  isShowModal:{
+    default: false
+  },
   data() {
     return {
       slide: 0,
@@ -311,6 +314,9 @@ export default {
     goCrm() {
       window.history.length > 1;
       this.$router.push("/crm");
+    },
+    show: function() {
+      this.$emit("show", !this.isShowModal);
     }
   },
   computed: {
