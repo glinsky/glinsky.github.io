@@ -108,7 +108,7 @@
 export default {
   name: "header-app",
   props: {
-    showModal:{
+    isShowModal:{
       default: false
     }
     },
@@ -127,7 +127,7 @@ export default {
       this.showMenu = false;
     },
     show: function() {
-      this.$emit("show", !this.showModal);
+      this.$emit("show", !this.isShowModal);
     }
   },
   mounted() {
