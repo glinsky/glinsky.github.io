@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
+import store from './store/index'
 
 // Style
 import 'bootstrap/dist/css/bootstrap.css'
@@ -36,8 +37,10 @@ const router = new VueRouter({
   }
 })
 
+
 const main = new Vue({
   router,
+  store,
   data: function () {
     return {};
   },

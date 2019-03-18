@@ -1,15 +1,13 @@
 <template>
   <div>
     <header id="header" class="container">
-      <header-app :isShowModal="showModal" @show="showModal = $event"></header-app>
+      <header-app></header-app>
     </header>
     <div id="main_wrap" class="col-12 px-0">
-      <app :isShowModal="showModal" @show="showModal = $event"></app>
+      <app></app>
     </div>
     <!-- modal -->
-    <transition name="modal" mode="out-in">
-      <modal :isShowModal="showModal" v-show="showModal" @close="showModal = $event"></modal>
-    </transition>
+      <modal></modal>
     <!-- end modal -->
     <footer id="footer" class="container-fluid px-0">
       <footer-app></footer-app>
@@ -38,6 +36,9 @@ export default {
     };
   },
   computed: {
+    show(){
+      return this.$store.state.showModal;
+    }
     // username () {
     //   return this.$route.params.username
     // }

@@ -283,7 +283,7 @@
             <p class="card-text">Узнайте, что мы можем сделать и как мы можем достичь ваших целей
               <br>- вместе.
             </p>
-            <b-button variant="outline-secondary" @click="show">Связаться с нами</b-button>
+            <b-button variant="outline-secondary" @click="showModal">Связаться с нами</b-button>
           </div>
         </div>
       </div>
@@ -304,6 +304,11 @@ export default {
       saveScrollPosition: false
     };
   },
+  computed: {
+    scrollBehavior: function(to, from, savedPosition) {
+      return savedPosition || { x: 0, y: 0 };
+    }
+  },
   methods: {
     onSlideStart(slide) {
       this.sliding = false;
@@ -315,15 +320,11 @@ export default {
       window.history.length > 1;
       this.$router.push("/crm");
     },
-    show: function() {
-      this.$emit("show", !this.isShowModal);
+    showModal() {
+      this.$store.state.showModal = true;
     }
   },
-  computed: {
-    scrollBehavior: function(to, from, savedPosition) {
-      return savedPosition || { x: 0, y: 0 };
-    }
-  }
+
 };
 </script>
 
