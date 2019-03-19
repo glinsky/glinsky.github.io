@@ -37,7 +37,7 @@
             <router-link :to="{ name: 'about-us' }">О нас</router-link>
           </b-nav-item>
           <b-nav-item href="#">
-            <b-button variant="primary" class="contact-us" @click="show">Связаться с нами</b-button>
+            <b-button variant="primary" class="contact-us" @click="showModal">Связаться с нами</b-button>
             <!-- <button class="modal-default-button" @click="show">OK</button> -->
           </b-nav-item>
         </b-navbar-nav>
@@ -107,11 +107,6 @@
 <script>
 export default {
   name: "header-app",
-  props: {
-    isShowModal:{
-      default: false
-    }
-    },
   data() {
     return {
       showMenu: false
@@ -121,13 +116,15 @@ export default {
     // username () {
     //   return this.$route.params.username
     // }
+
   },
   methods: {
     mouseLeave: function() {
       this.showMenu = false;
     },
-    show: function() {
-      this.$emit("show", !this.isShowModal);
+    
+    showModal() {
+      this.$store.state.showModal = true;
     }
   },
   mounted() {

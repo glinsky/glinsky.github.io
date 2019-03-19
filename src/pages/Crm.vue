@@ -140,7 +140,7 @@
               <p class="card-text">Оставьте заявку и мы совершим индивидуальный расчет проекта
                 <br>по внедрению системы
               </p>
-              <b-button variant="outline-secondary">Узнать стоимость</b-button>
+              <b-button variant="outline-secondary" @click="showModal">Узнать стоимость</b-button>
             </div>
           </div>
         </div>
@@ -299,6 +299,9 @@
       onSlideEnd(slide) {
         this.sliding = false;
       },
+      showModal() {
+      this.$store.state.showModal = true;
+    }
     }
   };
 </script>

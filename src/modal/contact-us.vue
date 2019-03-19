@@ -1,5 +1,6 @@
 <template>
   <div>
+    <transition name="modal" mode="out-in">
     <div class="modal-mask" v-show="showModal">
       <div class="modal-wrapper">
         <div class="modal-container">
@@ -58,46 +59,43 @@
                 </b-form-checkbox-group>
               </b-form-group>
 
-              <b-button type="submit" variant="primary">Submit</b-button>
+              <b-button type="submit" variant="primary" class="send">Отправить</b-button>
             </b-form>
           </div>
         </div>
       </div>
     </div>
-
+    </transition>
+    <transition name="modal" mode="out-in">
     <!-- small-modal -->
     <div class="modal-mask" v-show="showInfo">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-            <button type="button" class="close" @click="close">
+            <button type="button" class="close" @click="closeSmallModal">
               <span>&times;</span>
             </button>
           </div>
 
-          <div class="modal-body">
-           <h4>Спасибо!</h4>
+          <div class="modal-body pt-0">
+           <h4 class="mb-3">Спасибо!</h4>
             <span>Наш менеджер свяжется с Вами в ближайщее время. </span>
 
           </div>
         </div>
       </div>
     </div>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
   name: "modal",
-  props: {
-    isShowModal: {
-      default: false
-    }
-  },
   data() {
     return {
       showShadow: false,
-      showModal:true,
+      show: true,
       showInfo: false,
       form: {
         email: "",
@@ -108,17 +106,28 @@ export default {
       },
     };
   },
-  computed: {},
+  computed: {
+    showModal() {
+      return this.$store.state.showModal
+    }
+  },
   methods: {
-    close: function() {
-      this.$emit("close", !this.isShowModal);
-      this.showInfo = false;
-    },
     onSubmit(evt) {
       evt.preventDefault();
-      // alert(JSON.stringify(this.form))
       this.showInfo = true;
-      // this.$emit("close", !this.isShowModal);
+      this.close();
+    },
+    close() {
+      this.$store.state.showModal = false;
+      // очистка формы
+      this.form.email = ""
+      this.form.name = ""
+      this.form.tel = null
+      this.form.checked = []
+      this.form.text = ""
+    },
+    closeSmallModal() {
+      this.showInfo = false;
     }
   }
 };
@@ -175,6 +184,7 @@ button.close span {
   width: 500px;
   max-height: 720px;
   overflow: auto;
+  border-radius: 10px;
 }
 
 h4 {
@@ -190,6 +200,13 @@ h4 {
 
 label {
   font-size: 14px;
+}
+
+.send {
+   height: 60px;
+  border-radius: 8px;
+  background-color: #3b4eae;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
