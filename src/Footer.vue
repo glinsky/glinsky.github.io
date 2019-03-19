@@ -19,7 +19,7 @@
             <li>Компания</li>
             <li><a href="#"><router-link :to="{ name: 'services' }">Услуги</router-link></a></li>
             <li><a href="#"><router-link :to="{ name: 'about-us' }">О нас</router-link></a></li>
-            <li><a href="#">Связаться с нами</a></li>
+            <li class="cursor-pointer" @click="showModal">Связаться с нами</li>
           </ul>
         </div>
       </div>
@@ -58,14 +58,19 @@ export default {
     // }
   },
   methods: {
-    // goBack () {
-    //   window.history.length > 1
-    //     ? this.$router.go(-1)
-    //     : this.$router.push('/')
-    // }
+    showModal() {
+      this.$store.state.showModal = true;
+    }
   }
 };
 </script>
 
-<style scope>
+<style lang="scss" scope>
+ul {
+  .cursor-pointer{
+    cursor: pointer;
+    &:hover {text-shadow: 0px 0px 0px black;}
+  }
+}
+
 </style>

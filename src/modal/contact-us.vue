@@ -77,8 +77,8 @@
             </button>
           </div>
 
-          <div class="modal-body">
-           <h4>Спасибо!</h4>
+          <div class="modal-body pt-0">
+           <h4 class="mb-3">Спасибо!</h4>
             <span>Наш менеджер свяжется с Вами в ближайщее время. </span>
 
           </div>
@@ -184,6 +184,7 @@ button.close span {
   width: 500px;
   max-height: 720px;
   overflow: auto;
+  border-radius: 10px;
 }
 
 h4 {

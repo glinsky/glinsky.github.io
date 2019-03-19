@@ -293,10 +293,6 @@
 
 <script>
 export default {
-  name: "home",
-  isShowModal:{
-    default: false
-  },
   data() {
     return {
       slide: 0,
